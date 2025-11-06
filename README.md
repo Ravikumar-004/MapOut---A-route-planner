@@ -3,7 +3,8 @@
 MapOut is a route planner application with an interactive frontend and FastAPI-based backend.
 
 ---
-## Cloning Project
+## <img width="128" height="128" alt="image" src="https://github.com/user-attachments/assets/f8d64842-efab-46b5-ab2b-612f1c9f5d64" />
+Cloning Project
 ```bash
 cd path/to/project
 git clone https://github.com/Ravikumar-004/MapOut---A-route-planner
