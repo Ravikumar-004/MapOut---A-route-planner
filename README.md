@@ -1,20 +1,20 @@
-# MapOut---A-route-planner
+# 🗺️ MapOut — A Route Planner
 
+MapOut is a route planner application with an interactive frontend and FastAPI-based backend.
 
+---
 
-To run backend:
-\ncd backend
-\npip install -r reqirements.txt
-\npython -m uvicorn main:app --host 0.0.0.0 --port 8000
--
+## 🚀 Backend Setup
 
-To run frontend:
-cd .\frontend\map_out\
+```bash
+cd backend
+pip install -r requirements.txt
+python -m uvicorn main:app --host 0.0.0.0 --port 8000
+
+## 💻 Frontend Setup
+
+```bash
+cd ./frontend/map_out
 flutter pub get
-flutter run 
-(choose your device)
--
-
-
-
-reference paper: https://vldb.org/pvldb/vol3/R10.pdf
+flutter run
+➡️ When prompted, choose your desired device (emulator or connected physical device).
