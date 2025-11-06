@@ -10,7 +10,7 @@ MapOut is a route planner application with an interactive frontend and FastAPI-b
 cd backend
 pip install -r requirements.txt
 python -m uvicorn main:app --host 0.0.0.0 --port 8000
-```bash
+```
 
 ## 💻 Frontend Setup
 
@@ -19,4 +19,4 @@ cd ./frontend/map_out
 flutter pub get
 flutter run
 ➡️ When prompted, choose your desired device (emulator or connected physical device).
-```bash
+```
