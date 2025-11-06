@@ -3,9 +3,9 @@
 
 
 To run backend:
-cd backend
-pip install -r reqirements.txt
-python -m uvicorn main:app --host 0.0.0.0 --port 8000
+\ncd backend
+\npip install -r reqirements.txt
+\npython -m uvicorn main:app --host 0.0.0.0 --port 8000
 -
 
 To run frontend:
