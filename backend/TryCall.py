@@ -1,13 +1,15 @@
 import osmnx as ox
-from RouteProcesor import CalculateRoute
+from Modules.RouteProcessor import CalculateRoute
 
 G = ox.load_graphml("bhubaneswar_drive.graphml")
 
-route_data = CalculateRoute(
+desired_route, Missing, all_pois_info = CalculateRoute(
     G,
     "KIIT University, Bhubaneswar",
     "Bhubaneswar Railway Station",
-    "avoid Janpath Road"
+    "I want ATM and a Mall but avoid Highway"
 )
 
-print(route_data)
+print("Route points:", len(desired_route))
+print("Missing Locations:", Missing)
+print("Pois points:", len(all_pois_info))

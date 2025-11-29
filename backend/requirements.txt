@@ -1,0 +1,9 @@
+Python 3.10+
+FastAPI
+uvicorn
+OSMnx
+NetworkX
+Shapely
+Geopy
+matplotlib
+pandas
