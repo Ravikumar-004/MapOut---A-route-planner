@@ -113,10 +113,10 @@ Request:
 Response:
 ```json
 {
-  "route": [...],
+  "route": [],
   "missing_locs": [],
   "selected_pois": [
-    { "name": "XYZ Mall", "lat": ..., "lon": ..., "pref_type": "mall" }
+    { "name": "XYZ Mall", "lat": , "lon": , "pref_type": "mall" }
   ],
   "all_pois": [...]
 }
@@ -206,3 +206,4 @@ Update Flutter UI/logic easily by modifying:
 
 This project is open for personal and academic use.
 Modify and extend as you wish.
+
