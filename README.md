@@ -201,11 +201,12 @@ Update Flutter UI/logic easily by modifying:
 
 ------------------------------------------------------------------------------
 # Contributors
-Gedela Ravi Kumar   - 25AI06018@iitbbs.ac.in
-Betha Ajay Kumar    - 25AI06017@iitbbs.ac.in
-Prashanth Kumar     - 25AI06019@iitbbs.ac.in
-Ronak Das           - 25AI06020@iitbbs.ac.in
-Rahul Bankhira      - 25AI06006@iitbbs.ac.in
+- Gedela Ravi Kumar   - 25AI06018@iitbbs.ac.in
+- Betha Ajay Kumar    - 25AI06017@iitbbs.ac.in
+- Prashanth Kumar     - 25AI06019@iitbbs.ac.in
+- Ronak Das           - 25AI06020@iitbbs.ac.in
+- Rahul Bankhira      - 25AI06006@iitbbs.ac.in
+
 
 
 
