@@ -42,14 +42,14 @@ def CalculateRoute(G, source_name, dest_name, user_text, place_name=PLACE_NAME, 
         dst_node = ox.distance.nearest_nodes(G, dst_point[1], dst_point[0])
     except Exception as e:
         logger.warning("Geocoding failed: %s", e)
-        return [], [], ["Geocoding failed"], [], []
+        return [], ["Geocoding failed"], []
 
     try:
         direct_route = astar_path(G, src_node, dst_node, weight="length")
         direct_length = astar_length(G, direct_route, weight="length")
     except Exception as e:
         logger.warning("Direct route failed: %s", e)
-        return [], [], ["Route failed"], [], []
+        return [], ["Route failed"], []
 
     pref_candidates = {} 
     for pref in includes:
@@ -104,7 +104,7 @@ def CalculateRoute(G, source_name, dest_name, user_text, place_name=PLACE_NAME, 
 
     if not pref_candidates:
         coord_route = [(G.nodes[n]['y'], G.nodes[n]['x']) for n in direct_route]
-        return coord_route, included_names, Missing, [], all_poi_info
+        return coord_route, Missing, all_poi_info
 
     pref_keys = list(pref_candidates.keys())
     candidate_lists = [pref_candidates[k] for k in pref_keys]
@@ -135,7 +135,7 @@ def CalculateRoute(G, source_name, dest_name, user_text, place_name=PLACE_NAME, 
 
     if best_combo is None or best_combo_length == float("inf"):
         coord_route = [(G.nodes[n]['y'], G.nodes[n]['x']) for n in direct_route]
-        return coord_route, included_names, Missing, [], all_poi_info
+        return coord_route, Missing, all_poi_info
 
     detour = best_combo_length - direct_length
     logger.info("Best combo length=%.1f direct=%.1f detour=%.1f meters", best_combo_length, direct_length, detour)
@@ -150,3 +150,4 @@ def CalculateRoute(G, source_name, dest_name, user_text, place_name=PLACE_NAME, 
     coord_route = [(G.nodes[n]['y'], G.nodes[n]['x']) for n in final_nodes]
 
     return coord_route,  Missing, selected_pois_info
+
