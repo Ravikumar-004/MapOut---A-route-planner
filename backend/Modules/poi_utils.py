@@ -55,20 +55,7 @@ def get_poi_nodes(G, gdf):
             continue
 
     return poi_nodes
-
-def extract_poi_info_from_row(row, pref_name):
-    geom = row.geometry
-    if isinstance(geom, Point):
-        lat = geom.y
-        lon = geom.x
-    else:
-        centroid = geom.centroid
-        lat = centroid.y
-        lon = centroid.x
-
-    name = row.get("name") if ("name" in row and isinstance(row.get("name"), str)) else pref_name
-    return {"name": name, "lat": lat, "lon": lon, "pref_type": pref_name}
-
+    
 def poi_matches_avoid(row, avoid_list):
     if not avoid_list:
         return False
@@ -101,4 +88,5 @@ def top_k_candidates_by_distance(candidates, src_point, k):
         scored.append((d, node, lat, lon, row))
     scored.sort(key=lambda x: x[0])
     top = scored[:k]
+
     return [(node, lat, lon, row) for _, node, lat, lon, row in top]
